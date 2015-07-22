@@ -38,6 +38,9 @@
         <junit.version>4.12</junit.version>
 
         <json-schema-generator-maven-plugin.version>1.0.0-SNAPSHOT</json-schema-generator-maven-plugin.version>
+        <json-schema-generator-maven-plugin.outputDirectory>${project.build.directory}/schemas</json-schema-generator-maven-plugin.outputDirectory>
+
+        <maven-assembly-plugin.version>2.5.5</maven-assembly-plugin.version>
     </properties>
 
     <dependencies>
@@ -79,7 +82,27 @@
                             <includes>
                                 <include>${packageInPathFormat}/${policyName}Configuration.class</include>
                             </includes>
+                            <outputDirectory>${json-schema-generator-maven-plugin.outputDirectory}</outputDirectory>
                         </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>${maven-assembly-plugin.version}</version>
+                <configuration>
+                    <appendAssemblyId>false</appendAssemblyId>
+                    <descriptors>
+                        <descriptor>src/assembly/policy-assembly.xml</descriptor>
+                    </descriptors>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>make-policy-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
                     </execution>
                 </executions>
             </plugin>
