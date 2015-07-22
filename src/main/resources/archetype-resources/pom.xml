@@ -44,11 +44,12 @@
     </properties>
 
     <dependencies>
-        <!-- Compile scope -->
+        <!-- Provided scope -->
         <dependency>
             <groupId>io.gravitee.gateway</groupId>
             <artifactId>gravitee-gateway-api</artifactId>
             <version>${gravitee-api.version}</version>
+            <scope>provided</scope>
         </dependency>
 
         <!-- Test scope -->
