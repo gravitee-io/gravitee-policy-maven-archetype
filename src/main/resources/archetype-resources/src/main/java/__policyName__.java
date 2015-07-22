@@ -18,10 +18,10 @@
  */
 package ${package};
 
-import io.gravitee.gateway.api.PolicyChain;
 import io.gravitee.gateway.api.Request;
 import io.gravitee.gateway.api.Response;
 import io.gravitee.gateway.api.policy.Policy;
+import io.gravitee.gateway.api.policy.PolicyChain;
 import io.gravitee.gateway.api.policy.annotations.OnRequest;
 import io.gravitee.gateway.api.policy.annotations.OnResponse;
 
@@ -46,7 +46,6 @@ public class ${policyName} implements Policy {
     }
 
     @OnRequest
-    @Override
     public void onRequest(Request request, Response response, PolicyChain policyChain) {
         // Add a dummy header
         request.headers().put("X-DummyHeader", "Dummy header value");
@@ -56,7 +55,6 @@ public class ${policyName} implements Policy {
     }
 
     @OnResponse
-    @Override
     public void onResponse(Request request, Response response, PolicyChain policyChain) {
         if (isASuccessfulResponse(response)) {
             policyChain.doNext(request, response);
