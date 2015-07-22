@@ -20,7 +20,6 @@ package ${package};
 
 import io.gravitee.gateway.api.Request;
 import io.gravitee.gateway.api.Response;
-import io.gravitee.gateway.api.policy.Policy;
 import io.gravitee.gateway.api.policy.PolicyChain;
 import io.gravitee.gateway.api.policy.annotations.OnRequest;
 import io.gravitee.gateway.api.policy.annotations.OnResponse;
@@ -29,7 +28,7 @@ import io.gravitee.gateway.api.policy.annotations.OnResponse;
  * TODO put a detailed documentation on what is a Policy and how to define a new one
  */
 @SuppressWarnings("unused")
-public class ${policyName} implements Policy {
+public class ${policyName} {
 
     /**
      * The associated configuration to this ${policyName}
