@@ -34,7 +34,7 @@
     </parent>
 
     <properties>
-        <gravitee-api.version>1.0.0-SNAPSHOT</gravitee-api.version>
+        <gravitee-gateway-api.version>1.0.0-SNAPSHOT</gravitee-gateway-api.version>
         <junit.version>4.12</junit.version>
 
         <json-schema-generator-maven-plugin.version>1.0.0-SNAPSHOT</json-schema-generator-maven-plugin.version>
@@ -48,7 +48,7 @@
         <dependency>
             <groupId>io.gravitee.gateway</groupId>
             <artifactId>gravitee-gateway-api</artifactId>
-            <version>${gravitee-api.version}</version>
+            <version>${gravitee-gateway-api.version}</version>
             <scope>provided</scope>
         </dependency>
 
