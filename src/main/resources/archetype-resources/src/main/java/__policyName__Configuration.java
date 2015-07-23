@@ -37,17 +37,6 @@ public class ${policyName}Configuration implements PolicyConfiguration {
     private int integerParam;
 
     /**
-     * Create a new ${policyName}Configuration based on the given configuration parameter
-     *
-     * @param stringParam  a String parameter
-     * @param integerParam a integer parameter
-     */
-    public ${policyName}Configuration(String stringParam, int integerParam) {
-        this.stringParam = stringParam;
-        this.integerParam = integerParam;
-    }
-
-    /**
      * Get the String parameter
      *
      * @return the String parameter
