@@ -58,7 +58,7 @@ public class ${policyName} {
         if (isASuccessfulResponse(response)) {
             policyChain.doNext(request, response);
         } else {
-            policyChain.doError(new RuntimeException("Not a successful response"));
+            policyChain.sendError(new RuntimeException("Not a successful response"));
         }
     }
 
