@@ -25,19 +25,19 @@ import io.gravitee.gateway.api.policy.annotations.OnRequest;
 import io.gravitee.gateway.api.policy.annotations.OnResponse;
 
 @SuppressWarnings("unused")
-public class ${policyName} {
+public class ${policyName}Policy {
 
     /**
-     * The associated configuration to this ${policyName}
+     * The associated configuration to this ${policyName} Policy
      */
-    private ${policyName}Configuration configuration;
+    private ${policyName}PolicyConfiguration configuration;
 
     /**
-     * Create a new ${policyName} instance based on its associated configuration
+     * Create a new ${policyName} Policy instance based on its associated configuration
      *
-     * @param configuration the associated configuration to the new ${policyName} instance
+     * @param configuration the associated configuration to the new ${policyName} Policy instance
      */
-    public ${policyName}(${policyName}Configuration configuration) {
+    public ${policyName}Policy(${policyName}PolicyConfiguration configuration) {
         this.configuration = configuration;
     }
 

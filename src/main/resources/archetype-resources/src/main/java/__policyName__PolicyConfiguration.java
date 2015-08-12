@@ -18,18 +18,37 @@
  */
 package ${package};
 
-import org.junit.Test;
+import io.gravitee.gateway.api.policy.PolicyConfiguration;
 
-public class ${policyName}Test {
+@SuppressWarnings("unused")
+public class ${policyName}PolicyConfiguration implements PolicyConfiguration {
 
-    @Test
-    public void testOnRequest() throws Exception {
+    /**
+     * A String parameter
+     */
+    private String stringParam = "defaultValue";
 
+    /**
+     * A integer parameter
+     */
+    private int integerParam;
+
+    /**
+     * Get the String parameter
+     *
+     * @return the String parameter
+     */
+    public String getStringParam() {
+        return stringParam;
     }
 
-    @Test
-    public void testOnResponse() throws Exception {
-
+    /**
+     * Get the integer parameter
+     *
+     * @return the integer parameter
+     */
+    public int getIntegerParam() {
+        return integerParam;
     }
 
 }
