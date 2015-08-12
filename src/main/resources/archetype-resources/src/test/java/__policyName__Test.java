@@ -20,9 +20,6 @@ package ${package};
 
 import org.junit.Test;
 
-/**
- * TODO put a detailed documentation on how to test a Policy
- */
 public class ${policyName}Test {
 
     @Test

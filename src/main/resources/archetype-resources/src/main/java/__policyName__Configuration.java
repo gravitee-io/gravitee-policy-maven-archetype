@@ -20,9 +20,6 @@ package ${package};
 
 import io.gravitee.gateway.api.policy.PolicyConfiguration;
 
-/**
- * TODO put a detailed documentation on what is a ${policyName}Configuration and how to define a new one
- */
 @SuppressWarnings("unused")
 public class ${policyName}Configuration implements PolicyConfiguration {
 

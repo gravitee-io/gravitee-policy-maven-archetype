@@ -24,9 +24,6 @@ import io.gravitee.gateway.api.policy.PolicyChain;
 import io.gravitee.gateway.api.policy.annotations.OnRequest;
 import io.gravitee.gateway.api.policy.annotations.OnResponse;
 
-/**
- * TODO put a detailed documentation on what is a Policy and how to define a new one
- */
 @SuppressWarnings("unused")
 public class ${policyName} {
 
