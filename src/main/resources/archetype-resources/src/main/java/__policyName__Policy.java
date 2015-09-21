@@ -18,8 +18,6 @@
  */
 package ${package};
 
-import java.util.Arrays;
-
 import io.gravitee.common.http.HttpStatusCode;
 import io.gravitee.gateway.api.Request;
 import io.gravitee.gateway.api.Response;
@@ -48,7 +46,7 @@ public class ${policyName}Policy {
     @OnRequest
     public void onRequest(Request request, Response response, PolicyChain policyChain) {
         // Add a dummy header
-        request.headers().put("X-DummyHeader", Arrays.asList("Dummy header value"));
+        request.headers().set("X-DummyHeader", "Dummy header value");
 
         // Finally continue chaining
         policyChain.doNext(request, response);
