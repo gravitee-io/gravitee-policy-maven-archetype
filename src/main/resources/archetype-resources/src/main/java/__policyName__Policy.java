@@ -18,9 +18,13 @@
  */
 package ${package};
 
+import java.util.Arrays;
+
+import io.gravitee.common.http.HttpStatusCode;
 import io.gravitee.gateway.api.Request;
 import io.gravitee.gateway.api.Response;
 import io.gravitee.gateway.api.policy.PolicyChain;
+import io.gravitee.gateway.api.policy.PolicyResult;
 import io.gravitee.gateway.api.policy.annotations.OnRequest;
 import io.gravitee.gateway.api.policy.annotations.OnResponse;
 
@@ -44,7 +48,7 @@ public class ${policyName}Policy {
     @OnRequest
     public void onRequest(Request request, Response response, PolicyChain policyChain) {
         // Add a dummy header
-        request.headers().put("X-DummyHeader", "Dummy header value");
+        request.headers().put("X-DummyHeader", Arrays.asList("Dummy header value"));
 
         // Finally continue chaining
         policyChain.doNext(request, response);
@@ -55,7 +59,22 @@ public class ${policyName}Policy {
         if (isASuccessfulResponse(response)) {
             policyChain.doNext(request, response);
         } else {
-            policyChain.sendError(new RuntimeException("Not a successful response"));
+            policyChain.failWith(new PolicyResult() {
+                @Override
+                public boolean isFailure() {
+                    return true;
+                }
+
+                @Override
+                public int httpStatusCode() {
+                    return HttpStatusCode.INTERNAL_SERVER_ERROR_500;
+                }
+
+                @Override
+                public String message() {
+                    return "Not a successful response :-(";
+                }
+            });
         }
     }
 
