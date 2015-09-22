@@ -139,7 +139,7 @@ public void onRequest(Request request, Response response, PolicyChain policyChai
 }
 ```
 
-> The `PolicyChain` **must always be called to end a *on Request* processing**. Be ware to make a call to the `PolicyChain#doNext()` or  `PolicyChain#failWith()`   to correctly end the *on Request* processing.
+> The `PolicyChain` **must always be called to end an *on Request* processing**. Be ware to make a call to the `PolicyChain#doNext()` or  `PolicyChain#failWith()`   to correctly end the *on Request* processing.
 
 #### Apply Policy on the Response phase
 
@@ -182,16 +182,16 @@ private static boolean isASuccessfulResponse(Response response) {
 }
 ```
 
-> The `PolicyChain` **must always be called to end a *on Response* processing**. Be ware to make a call to the `PolicyChain#doNext()` or  `PolicyChain#failWith()`   to correctly end the *on Response* processing.
+> The `PolicyChain` **must always be called to end an *on Response* processing**. Be ware to make a call to the `PolicyChain#doNext()` or  `PolicyChain#failWith()`   to correctly end the *on Response* processing.
 
 #### Apply Policy on both of Request and Response phases
 
 A Policy is not restricted to only one Gateway proxy phase. It can be applied on both of the Request and Response phases by just using the both annotations in the same class.
 
-#### Injected parameters
+#### Provided parameters
 
-The annotated methods can declare several parameters (but not necessary all of them) which will be automatically injected by the Gateway at runtime.
-Available injected parameters are:
+The annotated methods can declare several parameters (but not necessary all of them) which will be automatically provided by the Gateway at runtime.
+Available provided parameters are:
 
 | Parameter class   | Mandatory | Description | 
 |---------|-------------|-------------|
