@@ -19,6 +19,7 @@
 package ${package};
 
 import io.gravitee.gateway.api.policy.PolicyConfiguration;
+import io.gravitee.common.http.HttpMethod;
 
 @SuppressWarnings("unused")
 public class ${policyName}PolicyConfiguration implements PolicyConfiguration {
@@ -32,6 +33,16 @@ public class ${policyName}PolicyConfiguration implements PolicyConfiguration {
      * A integer parameter
      */
     private int integerParam;
+
+    /**
+     * A integer parameter
+     */
+    private boolean booleanParam;
+
+    /**
+     * An enum parameter
+     */
+    private HttpMethod httpMethod;
 
     /**
      * Get the String parameter
@@ -51,4 +62,16 @@ public class ${policyName}PolicyConfiguration implements PolicyConfiguration {
         return integerParam;
     }
 
+    /**
+     * Get the boolean parameter
+     *
+     * @return the boolean parameter
+     */
+    public boolean getBooleanParam() {
+        return booleanParam;
+    }
+
+    public HttpMethod getHttpMethod() {
+        return httpMethod;
+    }
 }

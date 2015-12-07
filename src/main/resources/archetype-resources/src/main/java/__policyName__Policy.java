@@ -46,7 +46,7 @@ public class ${policyName}Policy {
     @OnRequest
     public void onRequest(Request request, Response response, PolicyChain policyChain) {
         // Add a dummy header
-        request.headers().set("X-DummyHeader", "Dummy header value");
+        request.headers().set("X-DummyHeader", configuration.getStringParam());
 
         // Finally continue chaining
         policyChain.doNext(request, response);
