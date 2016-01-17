@@ -18,7 +18,7 @@
  */
 package ${package};
 
-import io.gravitee.gateway.api.policy.PolicyConfiguration;
+import io.gravitee.policy.api.PolicyConfiguration;
 import io.gravitee.common.http.HttpMethod;
 
 @SuppressWarnings("unused")

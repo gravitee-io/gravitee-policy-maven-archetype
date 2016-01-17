@@ -21,10 +21,10 @@ package ${package};
 import io.gravitee.common.http.HttpStatusCode;
 import io.gravitee.gateway.api.Request;
 import io.gravitee.gateway.api.Response;
-import io.gravitee.gateway.api.policy.PolicyChain;
-import io.gravitee.gateway.api.policy.PolicyResult;
-import io.gravitee.gateway.api.policy.annotations.OnRequest;
-import io.gravitee.gateway.api.policy.annotations.OnResponse;
+import io.gravitee.policy.api.PolicyChain;
+import io.gravitee.policy.api.PolicyResult;
+import io.gravitee.policy.api.annotations.OnRequest;
+import io.gravitee.policy.api.annotations.OnResponse;
 
 @SuppressWarnings("unused")
 public class ${policyName}Policy {
