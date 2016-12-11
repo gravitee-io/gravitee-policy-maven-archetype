@@ -24,7 +24,7 @@
     <version>1.1.0-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
 
-    <name>The Gravitee Policy Maven archetype</name>
+    <name>Gravitee.io APIM - Policy - Maven archetype</name>
     <description>The Gravitee Policy Maven archetype</description>
 
     <parent>
