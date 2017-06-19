@@ -57,22 +57,8 @@ public class ${policyName}Policy {
         if (isASuccessfulResponse(response)) {
             policyChain.doNext(request, response);
         } else {
-            policyChain.failWith(new PolicyResult() {
-                @Override
-                public boolean isFailure() {
-                    return true;
-                }
-
-                @Override
-                public int httpStatusCode() {
-                    return HttpStatusCode.INTERNAL_SERVER_ERROR_500;
-                }
-
-                @Override
-                public String message() {
-                    return "Not a successful response :-(";
-                }
-            });
+            policyChain.failWith(
+                PolicyResult.failure(HttpStatusCode.INTERNAL_SERVER_ERROR_500, "Not a successful response :-("));
         }
     }
 
