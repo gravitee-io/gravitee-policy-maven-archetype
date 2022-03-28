@@ -19,19 +19,20 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.gravitee.maven.archetypes</groupId>
-    <artifactId>gravitee-policy-maven-archetype</artifactId>
-    <version>1.10.0-SNAPSHOT</version>
-    <packaging>maven-archetype</packaging>
-
-    <name>Gravitee.io APIM - Policy - Maven archetype</name>
-    <description>The Gravitee Policy Maven archetype</description>
 
     <parent>
         <groupId>io.gravitee</groupId>
         <artifactId>gravitee-parent</artifactId>
         <version>19.2.1</version>
     </parent>
+
+    <groupId>io.gravitee.maven.archetypes</groupId>
+    <artifactId>gravitee-policy-maven-archetype</artifactId>
+    <version>1.9.0</version>
+    <packaging>maven-archetype</packaging>
+
+    <name>Gravitee.io APIM - Policy - Maven archetype</name>
+    <description>The Gravitee Policy Maven archetype</description>
 
     <properties>
         <archetype-packaging.version>2.3</archetype-packaging.version>
