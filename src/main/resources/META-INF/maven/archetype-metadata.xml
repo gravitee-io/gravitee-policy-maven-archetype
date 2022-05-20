@@ -8,6 +8,9 @@
         <requiredProperty key="policyName">
             <defaultValue>Simple</defaultValue>
         </requiredProperty>
+        <requiredProperty key="testingGatewayVersion">
+            <defaultValue>3.18.0</defaultValue>
+        </requiredProperty>
     </requiredProperties>
 
     <fileSets>
@@ -27,6 +30,18 @@
             <directory>src/test/java</directory>
             <includes>
                 <include>**/*.java</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" encoding="UTF-8">
+            <directory>src/test/resources</directory>
+            <includes>
+                <include>**/*.xml</include>
+            </includes>
+        </fileSet>
+        <fileSet filtered="true" packaged="true" encoding="UTF-8">
+            <directory>src/test/resources</directory>
+            <includes>
+                <include>**/*.json</include>
             </includes>
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
