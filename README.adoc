@@ -23,11 +23,12 @@ Suppose you want to create a Policy that control if request contains the ``X-Foo
 mvn archetype:generate\
  -DarchetypeGroupId=io.gravitee.maven.archetypes\
  -DarchetypeArtifactId=gravitee-policy-maven-archetype\
- -DarchetypeVersion=1.9.0\
+ -DarchetypeVersion=1.10.0\
  -DartifactId=foo-header-check-policy\
  -DgroupId=my.gravitee.extension.policy\
  -Dversion=1.0.0-SNAPSHOT\
- -DpolicyName=FooHeaderCheck
+ -DpolicyName=FooHeaderCheck\
+ -DtestingGatewayVersion=3.18.0
 ```
 
 Once executed and parameters confirmed, the above command will create the ``foo-header-check-policy`` directory containing the following structure:
