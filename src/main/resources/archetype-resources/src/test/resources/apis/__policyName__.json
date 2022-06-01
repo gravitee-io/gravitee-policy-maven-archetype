@@ -7,7 +7,7 @@
     "endpoints": [
       {
         "name": "default",
-        "target": "http://localhost:8080/team",
+        "target": "http://localhost:8080/backend",
         "http": {
           "connectTimeout": 3000,
           "readTimeout": 60000

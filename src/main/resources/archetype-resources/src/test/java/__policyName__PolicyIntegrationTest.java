@@ -84,7 +84,7 @@ public class ${policyName}PolicyIntegrationTest extends AbstractPolicyTest<${pol
     @Test
     @DisplayName("Should test the policy deployed on an in memory gateway")
     public void shouldTest${policyName}PolicyDeployedOnAnInMemoryGateway(WebClient client) throws Exception {
-        wiremock.stubFor(get("/team").willReturn(ok("response from backend")));
+        wiremock.stubFor(get("/backend").willReturn(ok("response from backend")));
 
         final TestObserver<HttpResponse<Buffer>> obs = client.get("/test").rxSend().test();
 
@@ -98,6 +98,6 @@ public class ${policyName}PolicyIntegrationTest extends AbstractPolicyTest<${pol
             })
         .assertNoErrors();
 
-        wiremock.verify(getRequestedFor(urlPathEqualTo("/team")).withHeader("X-DummyHeader", equalTo("${policyName}")));
+        wiremock.verify(getRequestedFor(urlPathEqualTo("/backend")).withHeader("X-DummyHeader", equalTo("${policyName}")));
     }
 }
