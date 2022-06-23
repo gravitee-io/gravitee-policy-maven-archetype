@@ -47,7 +47,6 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.DisplayName;
 
 @GatewayTest
-@DisplayName("Should do callout and set response as attribute")
 @DeployApi("/${packageInPathFormat}/apis/${policyName}.json")
 public class ${policyName}PolicyIntegrationTest extends AbstractPolicyTest<${policyName}Policy, ${policyName}PolicyConfiguration> {
 
